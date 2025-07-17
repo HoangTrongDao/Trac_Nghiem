@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trắc nghiệm 1 trang</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+  <!-- THÔNG TIN THÍ SINH -->
+  <div id="student-info-box" class="user-info" style="display: none;">
+
+    <h4>👤 Thông tin thí sinh</h4>
+    <ul>
+      <li><strong>Họ tên:</strong> <span id="display-username"></span></li>
+      <li><strong>Mã sinh viên:</strong> <span id="display-student-id"></span></li>
+      <li><strong>Lớp:</strong> <span id="display-student-class"></span></li>
+      <li><strong>Thời gian bắt đầu:</strong> <span id="start-time"></span></li>
+    </ul>
+  </div>
+
+  <!-- ĐĂNG NHẬP -->
+  <div id="login-container">
+     <img src="hinata.jpg" alt="Cute Bear" class="cute-img">
+    <h2> 🐻Đăng nhập để làm bài</h2>
+    <input type="text" id="username" placeholder="Nhập họ tên" required><br>
+    <input type="text" id="studentId" placeholder="Nhập mã sinh viên" required><br>
+    <input type="text" id="studentClass" placeholder="Nhập lớp" required><br>
+    <button onclick="login()">Bắt đầu làm bài</button>
+  </div>
+
+  <!-- TRẮC NGHIỆM -->
+  <div class="quiz-container" id="quiz-container" style="display: none;">
+    <h2>Trắc nghiệm - Lý Luận Học</h2>
+    <h3 id="welcome-message"></h3>
+
+    <form id="quizForm">
+      <!-- Câu hỏi được tạo bằng JS -->
+     <div class="result-fixed" id="result" style="display: none;"></div>
+    </form>
+
+    <div class="submit-area">
+      <button type="button" onclick="resetQuiz()">🔄 Làm lại đề</button>
+      <button type="button" onclick="submitQuiz()">📝 Nộp bài</button>
+    </div>
+
+    <div id="result" class="result-area"></div>
+  </div>
+
+  <script src="js.js"></script>
+  <div id="result-box" class="draggable">
+  <span id="close-result" onclick="closeResult()">❌</span>
+  <div id="result-content"></div>
+</div>
+<div id="result-box" class="draggable">
+  <span id="close-result" onclick="closeResult()">❌</span>
+  <div id="result-content"></div>
+</div>
+
+</body>
+</html>
