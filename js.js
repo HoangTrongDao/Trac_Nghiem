@@ -1,3 +1,4 @@
+let selectedSet = null; // Bộ đề đã chọn
 const questions =[
   {
     "question": "1. Hoạt động dạy và hoạt động học là 2 thành tố có vai trò như thế nào trong quá trình dạy học?",
@@ -25,7 +26,8 @@ const questions =[
       "Nguyên tắc đảm bảo thống nhất giữa tính khoa học và tính giáo dục",
       "Nguyên tắc đảm bảo sự thống nhất giữa lý luận và thực tiễn",
       "Nguyên tắc đảm bảo sự thống nhất giữa tính vững chắc của tri thức và tính mềm dẻo của tư duy",
-      "Nguyên tắc đảm bảo tính vừa sức"
+      "Nguyên tắc đảm bảo tính vừa sức( _ đây là tau thử nhé , K ẢNH HƯỜNG ĐÁP ÁN ĐÚNG)
+      "
     ],
     "correct": 3
   },
@@ -287,7 +289,7 @@ const questions =[
       "nội dung dạy học",
       "phương pháp dạy học"
     ],
-    "correct": 3
+    "correct": 2
   },
   {
     "question": "36. B-Learning là",
@@ -307,7 +309,7 @@ const questions =[
       "Phương pháp Dạy học bằng tình huống",
       "Phương pháp Dạy học nhóm"
     ],
-    "correct": 3
+    "correct": 1
   },
   {
     "question": "38. Học tập qua trải nghiệm là quá trình cá nhân huy động tối đa......... khi trực tiếp tham gia vào các hoạt động gắn với thực tiễn.",
@@ -362,7 +364,7 @@ const questions =[
   {
     "question": "44. Phát triển thế giới quan khoa học cho học sinh là yêu cầu của",
     "options": ["mục tiêu dạy học", "nội dung dạy học", "nguyên tắc dạy học", "nhiệm vụ dạy học"],
-    "correct": 0
+    "correct": 3
   },
   {
     "question": "45. Yêu cầu, nhiệm vụ học tập đặt ra cho học sinh do tiến trình dạy học dẫn đến là điều kiện để",
@@ -382,7 +384,7 @@ const questions =[
   {
     "question": "48. Bản chất quá trình dạy học là quá trình tổ chức hoạt động học tập có tính.......cho học sinh",
     "options": ["độc đáo", "khoa học", "thực tiễn", "riêng biệt"],
-    "correct": 1
+    "correct": 0
   },
   {
     "question": "49. Kinh tế- xã hội của địa phương chưa đáp ứng được việc thực hiện chương trình dạy học của cấp học, đó là biểu hiện của mâu thuẫn nào dưới đây?",
@@ -422,7 +424,7 @@ const questions =[
   {
     "question": "55. “Học là quá trình giải quyết vấn đề” là tư tưởng chủ đạo của lý thuyết học tập nào?",
     "options": ["Thuyết kiến tạo", "Thuyết nhận thức", "Thuyết hành vi", "Thuyết đa trí tuệ"],
-    "correct": 0
+    "correct": 1
   },
   {
     "question": "56. “Học tập dựa vào hiểu biết và kinh nghiệm của bản thân“ là cơ chế học tập nào ở người học?",
@@ -442,7 +444,7 @@ const questions =[
   {
     "question": "59. Trong quá trình dạy học, hoạt động nhận thức của người học có tính chất",
     "options": ["độc quyền", "độc đắc", "độc đáo", "độc lập"],
-    "correct": 3
+    "correct": 2
   },
   {
     "question": "60. Mối quan hệ giữa người dạy và người học trong quá trình dạy học là mối quan hệ",
@@ -457,7 +459,7 @@ const questions =[
       "Mối quan hệ biện chứng giữa người dạy và người học",
       "Mối quan hệ biện chứng giữa nội dung dạy học với người dạy và người học"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "question": "62. Nguyên tắc dạy học được xây dựng trên cơ sở nào sau đây?",
@@ -532,7 +534,7 @@ const questions =[
   {
     "question": "72. Học là quá trình giải quyết vấn đề là tư tưởng chủ đạo của lý thuyết học tập nào?",
     "options": ["Thuyết kiến tạo", "Thuyết nhận thức", "Thuyết hành vi", "Thuyết đa trí tuệ"],
-    "correct": 0
+    "correct": 1
   },
   {
     "question": "73. Phương pháp dạy học nào dưới đây thuộc nhóm các phương pháp dạy học tích cực?",
@@ -587,12 +589,12 @@ const questions =[
   {
     "question": "80. Giải quyết mâu thuẫn nào của quá trình dạy học sẽ tạo nên điều kiện cho sự phát triển của quá trình dạy học?",
     "options": ["Mâu thuẫn bên trong", "Mâu thuẫn bên ngoài", "Mâu thuẫn cơ bản", "Mâu thuẫn không cơ bản"],
-    "correct": 0
+    "correct": 2
   },
   {
     "question": "81. Tích cực hóa hoạt động nhận thức của học sinh là một khâu thuộc về",
     "options": ["bản chất của quá trình dạy học", "động lực của quá trình dạy học", "nhiệm vụ dạy học", "logic quá trình dạy học"],
-    "correct": 0
+    "correct": 3
   },
   {
     "question": "82. Trong quá trình dạy học, giáo viên tổ chức cho học sinh vận dụng kiến thức vào thực tiễn, điều này chứng tỏ giáo viên đã vận dụng nguyên tắc dạy học nào?",
@@ -662,7 +664,7 @@ const questions =[
       "Mâu thuẫn giữa phương pháp và phương tiện dạy học",
       "Mâu thuẫn giữa nội dung dạy học với sự tiến bộ của khoa học - công nghệ"
     ],
-    "correct": 0
+    "correct": 1
   },
   {
     "question": "89. Quá trình dạy học có nhiệm vụ nào sau đây?",
@@ -692,7 +694,7 @@ const questions =[
       "nhiệm vụ dạy học",
       "logic quá trình dạy học"
     ],
-    "correct": 0
+    "correct": 3
   },
   {
     "question": "92. Trong quá trình dạy học, giáo viên không được tạo nên bầu không khí lớp học căng thẳng, là yêu cầu của nguyên tắc dạy học nào?",
@@ -742,7 +744,7 @@ const questions =[
       "thao tác hành động nhỏ",
       "thao tác hành động"
     ],
-    "correct": 2
+    "correct": 3
   },
   {
     "question": "97. Phương pháp Thuyết trình là phương pháp dạy học ở cấp độ",
@@ -752,7 +754,7 @@ const questions =[
       "vi mô",
       "không thuộc 3 cấp độ trên"
     ],
-    "correct": 2
+    "correct": 1
   }
 ]
 
